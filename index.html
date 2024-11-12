@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jane Doe</title>
+    <!-- Link to the CSS file (Lab 1 will focus on styling) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section (Lab 1) -->
+    <header>
+        <h1>Jane Doe</h1>
+        <p>Aspiring Software Developer</p>
+        <!-- Placeholder image for the profile picture -->
+        <img src="https://picsum.photos/150" alt="Jane Doe" width="150">
+    </header>
+
+    <!-- About Me Section (Lab 1) -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Jane, a second-year computer science student at XYZ University. I'm passionate about web development and enjoy creating interactive web applications.</p>
+    </section>
+
+    <!-- Resume Section (Lab 1) -->
+    <section id="resume">
+        <h2>Resume</h2>
+
+        <h3>Education</h3>
+        <ul>
+            <li>B.Sc. in Computer Science, XYZ University (2022 - Present)</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>Programming Languages: Python, JavaScript, C++</li>
+            <li>Web Development: HTML, CSS, React</li>
+        </ul>
+
+        <h3>Experience</h3>
+        <ul>
+            <li>Intern at ABC Tech Solutions (Summer 2023)</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section (Lab 1) -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <h3>Portfolio Website</h3>
+        <p>A personal website to showcase my projects and skills.</p>
+        <a href="https://github.com/janedoe/portfolio-website" target="_blank">View on GitHub</a>
+
+        <h3>Weather App</h3>
+        <p>A web application that displays weather information using an external API.</p>
+        <a href="https://github.com/janedoe/weather-app" target="_blank">View on GitHub</a>
+    </section>
+
+    <!-- Contact Me Section (Lab 3) -->
+    <section id="contact">
+        <h3 class="h3 form-title">Contact Form</h3>
+    
+        <!-- Thank you message -->
+        <div id="thankYouMessage" style="display: none;">
+            <p>Thank you for your message! I will get back to you soon.</p>
+        </div>
+    
+        <!-- Form setup for Netlify -->
+        <form name="contactForm" method="POST" netlify netlify-honeypot="bot-field" id="contactForm" data-netlify="true">
+            <input type="hidden" name="form-name" value="contactForm">
+    
+            <div class="input-wrapper">
+                <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                <input type="email" name="email" class="form-input" placeholder="Email address" required>
+            </div>
+    
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+    
+            <!-- Add the form-btn class here -->
+            <button class="form-btn" type="submit">
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+            </button>
+        </form>
+    </section>
+    
+
+    
+    
+
+    <!-- Footer Section (Lab 1) -->
+    <footer>
+        <p>&copy; 2023 Jane Doe</p>
+        <a href="https://www.linkedin.com/in/janedoe" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/janedoe" target="_blank">GitHub</a>
+    </footer>
+
+    <!-- JavaScript for Form Validation (Lab 3) -->
+   <!-- JavaScript for Form Validation and Displaying Thank You Message -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Retrieve values from the fields
+    const name = document.querySelector('input[name="fullname"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const message = document.querySelector('textarea[name="message"]').value.trim();
+
+    // Regular expression for email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Check for empty fields and email format
+    if (!name) {
+        alert('Please enter your full name.');
+        return;
+    }
+
+    if (!email) {
+        alert('Please enter your email address.');
+        return;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    if (!message) {
+        alert('Please enter your message.');
+        return;
+    }
+
+    // Submit the form
+    this.submit();
+
+    // Hide the form and display the thank you message
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('thankYouMessage').style.display = 'block';
+
+    // Reload the page after 5 seconds
+    setTimeout(function() {
+        location.reload();
+    }, 5000);
+});
+
+</script>
+
+
+</body>
+</html>
