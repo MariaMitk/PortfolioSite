@@ -4,30 +4,53 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-image: url('photos/backgoround.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Header Styles (Lab 1) */
 header {
-  background-color: #ff93f4;
-  color: #000000;
+  background-image: url('photos/headerbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
   padding: 30px;
   text-align: center;
 }
 
-header h1 {
+.header-container {
+  display: flex; /* Flexbox διάταξη */
+  align-items: center; /* Κεντράρει κάθετα τα περιεχόμενα */
+  justify-content: center;
+}
+
+.header-image {
+  width: 250px; /* Μπορείς να προσαρμόσεις το μέγεθος */
+  height: auto; /* Διατηρεί τις αναλογίες της εικόνας */
+  border: 3px solid #ffffff; /* Λεπτό λευκό πλαίσιο */
+  border-radius: 50%; /* Κυκλική εικόνα */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Απαλή σκιά */
+}
+
+.header-text {
+  color: #ffffff; /* Χρώμα για το κείμενο */
+  text-align: center; /* Ευθυγράμμιση του κειμένου */
+  margin-left: 10px; /* Απόσταση από την εικόνα */
+}
+
+.header-text h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
   margin: 0;
-  font-size: 48px;
 }
 
-header p {
+.header-text p {
+  font-family: 'Dancing Script', cursive;
   font-size: 20px;
-}
-
-/* Profile Image Styling (Lab 1) */
-header img {
-  border-radius: 50%;
-  margin-top: 20px;
+  margin: 0; /* Μικρό πάνω περιθώριο */
 }
 
 /* Section Styles (Lab 1) */
@@ -36,52 +59,111 @@ section {
   background-color: #fff;
   margin: 20px;
 }
+/* #FFCCFF,#CCCCFF,#CCFFFF,#CC99FF,#FFCCFF,#FFCCFF,#CCCCFF,#CCFFFFsection  */
+h2 {
+  font-family: 'Pacifico', cursive; /* Χειρόγραφη, girly γραμματοσειρά */
+  text-shadow: 2px 2px 5px #fa78a4; /* Ροζ σκιά */
+  padding-bottom: 1px;
+  background-color: #fbeec4; /* Απαλό ροζ */
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block; /* Για να μην πιάσει όλο το πλάτος */
+  margin-bottom: 1px;
+}
 
-section h2 {
-  border-bottom: 2px solid #e8491d;
-  padding-bottom: 10px;
+h3{
+  font-family: 'Merriweather', serif; /* Κομψή και θηλυκή */
+  font-size: 20px;
+  margin-bottom: auto;
+}
+
+p{
+  font-family: 'Merriweather', serif; /* Κομψή και θηλυκή */
+  font-size: 17px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+}
+
+/* Container για τα δύο sections */
+.about-resume-container {
+  display: flex; /* Χρησιμοποιούμε flexbox για να τα τοποθετήσουμε δίπλα */
+  justify-content: space-between; /* Βάζει χώρο ανάμεσά τους */
+  gap: 1px; /* Απόσταση μεταξύ των δύο sections */
+  flex-wrap: wrap; /* Αν το πλάτος είναι μικρό, θα μετακινηθούν κάτω */
+  padding: 20px;
 }
 
 /* About Me Section Styling (Lab 1) */
 section#about {
-  background-color: #e2e2e2;
+  flex: 1;
+  background-color: #fabeb6;
+  padding: 10px 15px;
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+}
+
+section#resume{
+  flex: 1;
+  background-color: #F2BCE3;
+  padding: 10px 15px;
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
 }
 
 /* Resume Section Styling (Lab 1) */
 section#resume ul {
+  font-family: 'Merriweather', serif; /* Κομψή και θηλυκή */
+  font-size: 17px;
+  margin-top: 1px;
   list-style-type: none;
   padding: 0;
 }
 
 section#resume li {
-  background-color: #f4f4f4;
+  background-color: #fbeec4;
   margin-bottom: 5px;
-  padding: 10px;
-  border-left: 4px solid #50b3a2;
+  padding: 5px;
+  border-left: 4px solid #fa78a4;
+}
+
+section#projects {
+  background-color: #fabeb6;
+  padding: 10px 15px;
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
 }
 
 /* Project Section Styling (Lab 1) */
+
 section#projects a {
   display: inline-block;
-  margin-top: 10px;
-  color: #50b3a2;
+  margin-top: 5px;
+  margin-left: 20px;
+  color: #ffffff;
   text-decoration: none;
+
 }
 
 section#projects a:hover {
+  color: #fbeec4; /* Λευκό χρώμα κατά το hover */
   text-decoration: underline;
+  transform: translateY(-5px); /* Ελαφριά ανύψωση του συνδέσμου */
 }
 
 /* Contact Form Styling (Lab 1) */
+section#contact{
+  background-color: #F2BCE3;
+  padding: 10px 15px;
+  border-radius: 10px; /* Στρογγυλεμένες γωνίες */
+}
+
 form {
-  background-color: #f4f4f4;
-  padding: 20px;
+  background-color: #F2BCE3;
+  padding: 40px;
   border-radius: 5px;
 }
 
 form label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -96,8 +178,8 @@ form textarea {
 }
 
 .form-btn {
-  background-color: #50b3a2;
-  color: #fff;
+  background-color: #fbeec4;
+  color: #000000;
   border: none;
   padding: 15px 30px;
   cursor: pointer;
@@ -110,7 +192,7 @@ form textarea {
 }
 
 .form-btn:hover {
-  background-color: #3e8e7e;
+  background-color: #ffffff;
 }
 
 /* Submit Button Styling */
@@ -129,20 +211,23 @@ form input[type="submit"],
 
 form input[type="submit"]:hover,
 .form-submit:hover {
-  background-color: #3e8e7e;
+  background-color: #fcfcfc;
 }
 
 /* Footer Styles (Lab 1) */
 footer {
-  background-color: #35424a;
-  color: #f4f4f4;
+  background-image: url('photos/headerbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000000;
   text-align: center;
   padding: 20px;
   margin-top: 20px;
 }
 
 footer a {
-  color: #f4f4f4;
+  color: #000000;
   text-decoration: none;
   margin: 0 10px;
 }

@@ -3,46 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jane Doe</title>
+    <title>Maria Mitkou</title>
     <!-- Link to the CSS file (Lab 1 will focus on styling) -->
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header Section (Lab 1) -->
     <header>
-        <h1>Jane Doe</h1>
-        <p>Aspiring Software Developer</p>
-        <!-- Placeholder image for the profile picture -->
-        <img src="https://picsum.photos/150" alt="Jane Doe" width="150">
+        <div class="header-container">
+            <!-- Placeholder image for the profile picture -->
+            <img src="photos/profilpic.jpg" alt="Avatar" class="header-image">
+            <div class="header-text">
+                <h1>Maria Mitkou</h1>
+                <p>Electrical and Computer Engineer</p>
+            </div>
+        </div>
     </header>
 
     <!-- About Me Section (Lab 1) -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Jane, a second-year computer science student at XYZ University. I'm passionate about web development and enjoy creating interactive web applications.</p>
-    </section>
-
-    <!-- Resume Section (Lab 1) -->
-    <section id="resume">
-        <h2>Resume</h2>
-
-        <h3>Education</h3>
-        <ul>
-            <li>B.Sc. in Computer Science, XYZ University (2022 - Present)</li>
-        </ul>
-
-        <h3>Skills</h3>
-        <ul>
-            <li>Programming Languages: Python, JavaScript, C++</li>
-            <li>Web Development: HTML, CSS, React</li>
-        </ul>
-
-        <h3>Experience</h3>
-        <ul>
-            <li>Intern at ABC Tech Solutions (Summer 2023)</li>
-        </ul>
-    </section>
+     <div class="about-resume-container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I’m Maria Mitkou, a 21-year-old undergraduate student at the University of Western Macedonia, currently in my fourth year of studies in Electrical and Computer Engineering. Throughout my academic journey, I have developed a strong foundation in various programming languages such as Python, C, C++, Java, HTML, CSS and Matlab. I am passionate about expanding my technical expertise and am eager to apply my knowledge to real-world challenges in the fields of software development, systems engineering, and automation.</p>
+            <p>Outside of academics, I enjoy a variety of hobbies, including crocheting, sewing, playing the guitar, and practicing yoga. I’m also an active member of the university volleyball team, which allows me to stay fit and work on teamwork skills. Additionally, I’m constantly striving to improve my Spanish and am always looking for new ways to challenge myself.</p>
+        </section>
+    
+        <!-- Resume Section (Lab 1) -->
+        <section id="resume">
+            <h2>Resume</h2>
+    
+            <h3>Education</h3>
+            <ul>
+                <li>Studying Electrical and Computer Engineering, University of Western Macedonia (2021 - Present)</li>
+                <li>Studied Informatics Engineering, University of Porto (6 months of 2024)(Erasmus)</li>
+            </ul>
+    
+            <h3>Skills</h3>
+            <ul>
+                <li>Programming Languages: Python, JavaScript, C++, C, Java, Matlab.</li>
+                <li>Web Development: HTML, CSS, Flutter</li>
+            </ul>
+        </section>
+     </div>
 
     <!-- Projects Section (Lab 1) -->
     <section id="projects">
@@ -50,11 +54,23 @@
 
         <h3>Portfolio Website</h3>
         <p>A personal website to showcase my projects and skills.</p>
-        <a href="https://github.com/janedoe/portfolio-website" target="_blank">View on GitHub</a>
+        <a href="https://github.com/MariaMitk/PortfolioSite" target="_blank">View on GitHub</a>
 
-        <h3>Weather App</h3>
-        <p>A web application that displays weather information using an external API.</p>
-        <a href="https://github.com/janedoe/weather-app" target="_blank">View on GitHub</a>
+        <h3>Evasive PDFs</h3>
+        <p>A machine learning project where a dataset of Evasive PDF samples with some features containing 500,000 generated evasive samples. The goal is to predict which of them are malicious.</p>
+        <a href="https://github.com/MariaMitk/AI_Project2" target="_blank">View on GitHub</a>
+
+        <h3>Computer Graphics Project</h3>
+        <p>A computer graphics project where we experimented with shapes, textures and movement using OpenGl.</p>
+        <a href="https://github.com/florentiadiam/Computer-Graphics-Project" target="_blank">View on GitHub</a>
+
+        <h3>Tarrace game</h3>
+        <p>A board game called teracce using pygame. It has also a mode where you can play the game with an AI of various difficulties.</p>
+        <a href="https://github.com/domingosneto03/Terrace_IART_Assignment1" target="_blank">View on GitHub</a>
+
+        <h3>Java Sockets game</h3>
+        <p>A game of rock paper scissors between two servers.</p>
+        <a href="https://github.com/florentiadiam/Parallel-and-Distributed-Computing" target="_blank">View on GitHub</a>
     </section>
 
     <!-- Contact Me Section (Lab 3) -->
@@ -84,17 +100,14 @@
             </button>
         </form>
     </section>
-    
-
-    
-    
 
     <!-- Footer Section (Lab 1) -->
     <footer>
-        <p>&copy; 2023 Jane Doe</p>
-        <a href="https://www.linkedin.com/in/janedoe" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/janedoe" target="_blank">GitHub</a>
+        <p>&copy; 2024 Maria Mitkou</p>
+        <a href="https://github.com/MariaMitk" target="_blank">GitHub</a>
     </footer>
 
+    <!-- Σύνδεση με το αρχείο JavaScript -->
+    <script src="formValidation.js"></script>
 </body>
 </html>
