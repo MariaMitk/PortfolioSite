@@ -38,7 +38,7 @@ const summary = `
                     Email: ${email}
                     Message: ${message}
                 `;
-const userChoice = confirm(`Please confirm your details:\n\n${summary}\n\nDo you want to proceed?`);
+const userChoice = confirm(`Please confirm your details:\n${summary}\nDo you want to proceed?`);
 
 if (userChoice) {
     // Submit the form
