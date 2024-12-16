@@ -41,23 +41,16 @@ const summary = `
 const userChoice = confirm(`Please confirm your details:\n\n${summary}\n\nDo you want to proceed?`);
 
 if (userChoice) {
-   // Δημιουργία του `mailto` συνδέσμου
-   const mailtoLink = `mailto:${email}?subject=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0A%0AMessage:%20${encodeURIComponent(message)}`;
-   // Άνοιγμα του συνδέσμου
-   window.location.href = mailtoLink;
+    // Submit the form
+    this.submit();
+    // Hide the form and display the thank you message
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('thankYouMessage').style.display = 'block';
+    // Reload the page after 5 seconds
+    setTimeout(function() {
+        location.reload();
+    }, 5000);
 } else {
     alert('Submission canceled.');
 }
-
-// Submit the form
-this.submit();
-
-// Hide the form and display the thank you message
-document.getElementById('contactForm').style.display = 'none';
-document.getElementById('thankYouMessage').style.display = 'block';
-
-// Reload the page after 5 seconds
-setTimeout(function() {
-    location.reload();
-}, 5000);
 });
